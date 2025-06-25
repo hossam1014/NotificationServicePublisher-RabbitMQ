@@ -145,7 +145,7 @@ The endpoint uses MassTransit's `IPublishEndpoint` to publish a `NotificationMes
 
 ## Dependencies
 
-- .NET 6.0+
+- .NET 8.0+
 - MassTransit
 - MassTransit.RabbitMQ
 - Swashbuckle.AspNetCore (for API documentation)
