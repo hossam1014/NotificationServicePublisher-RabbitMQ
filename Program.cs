@@ -87,8 +87,8 @@ app.MapPost("/publish", async (IPublishEndpoint bus) =>
 {
     var evt = new NotificationMessage
     {
-        Title = $"Test Notification 555",
-        Body = $"Test Notification Content 555",
+        Title = $"Test Notification",
+        Body = $"Test Notification Content",
         Type = NotificationType.Group,
         Channels = new List<ChannelType> { ChannelType.Email },
         TargetUsers = new List<string> { "g1623g6-12g31g-123g-123g-123g123g", "g1623g6-12g31g-123g-123g-123g123g" },
