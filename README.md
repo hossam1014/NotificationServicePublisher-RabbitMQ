@@ -64,6 +64,10 @@ The notification messages follow a specific schema:
 
         // to identify the notification category (Update, Offer, Alert)
         public NotificationCategory Category { get; set; }
+
+        // NEW: For users not in the system
+        public List<string>? ExternalEmails { get; set; }
+        public List<string>? ExternalPhoneNumbers { get; set; }
     }
 
     public enum NotificationType
