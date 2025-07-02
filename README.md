@@ -31,7 +31,20 @@ services.AddMassTransit(config =>
       h.Password(Configuration["RabbitMQ:Password"]);
     });
     
-    cfg.ConfigureEndpoints(context);
+    // Configure message type mapping
+        cfg.Message<NotificationMessage>(c =>
+        {
+            c.SetEntityName("NotificationMessage"); // Use simple name
+        });
+
+        // Configure for cross-platform compatibility
+        cfg.ConfigureJsonSerializerOptions(options =>
+        {
+            options.Converters.Add(new JsonStringEnumConverter());
+            return options;
+        });
+
+        cfg.ConfigureEndpoints(context);
   });
 });
 ```
