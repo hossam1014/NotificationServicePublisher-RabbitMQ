@@ -43,7 +43,9 @@ The RabbitMQ connection settings can be configured in the `appsettings.json` fil
   "RabbitMQ": {
   "Host": "rabbitmq://localhost",
   "Username": "guest",
-  "Password": "guest"
+  "Password": "guest",
+    "VirtualHost": "jdkwwpno"
+
   }
 }
 ```
